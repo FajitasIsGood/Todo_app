@@ -1,0 +1,16 @@
+.container {
+  max-width: 60%;   /* Largeur maximale du container */
+  margin: 0 auto;       /* Centre le container horizontalement */
+  padding: 20px;        /* Espacement intérieur */
+  background-color: #2f93bb; /* Couleur de fond */
+  text-align: center;   /* Centre le texte à l’intérieur */
+  border: 1px solid #ccc; /* Petite bordure optionnelle */
+  border-radius: 12px;
+}
+
+.container h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

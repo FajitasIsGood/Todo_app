@@ -1,0 +1,19 @@
+/* Conteneur principal */
+div {
+  max-width: 60%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #2f93bb;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre */
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+

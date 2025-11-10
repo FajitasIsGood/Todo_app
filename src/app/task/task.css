@@ -1,0 +1,82 @@
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ✅ texte à gauche, checkbox à droite */
+  background-color: #ffffff;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 95%;
+}
+
+.task:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Bloc texte */
+.task-info {
+  flex: 1; /* prend toute la largeur dispo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.task-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.task-info p {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ✅ Checkbox à droite */
+.task-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-check input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #2f93bb;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.task-check input[type="checkbox"]:hover {
+  border-color: #1d6f8c;
+}
+
+.task-check input[type="checkbox"]:checked {
+  background-color: #2f93bb;
+  border-color: #2f93bb;
+}
+
+.task-check input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: 14px;
+  color: white;
+}
+
+/* ✅ Texte barré quand coché */
+.done h3,
+.done p {
+  text-decoration: line-through;
+  color: #aaa;
+}

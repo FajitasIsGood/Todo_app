@@ -1,0 +1,13 @@
+<!-- [class.done]="task.done" permet de bind la propriete .done de la class CSS par rapport a task.done, si task.done est true (case cocher) [(ngModel)]="task.done" alors la classe .done sera afficher (permet de barrer le titre et la descrioption)-->
+<div class="task" [class.done]="task.done">
+  
+  <div class="task-info" >
+    <h3 >{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+  </div>
+
+    <div class="task-check">
+        <input type="checkbox" [(ngModel)]="task.done" />
+    </div>
+</div>
+

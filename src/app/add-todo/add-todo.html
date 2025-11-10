@@ -1,0 +1,10 @@
+<!-- Utilisation de l'event ngSubmit (bouton type submit) pour recuperer les donnees de ngModel saisit par l'utilisateur dans $event, va call onSubmit qui va emettre les donnees via add -->
+<form class="simple-form" (ngSubmit)="onSubmit($event)">
+  <label for="title">Titre</label>
+  <input type="text" id="title" name="title" [(ngModel)]="Title" placeholder="Entrez le titre">
+
+  <label for="description">Description</label>
+  <textarea id="description" name="description" [(ngModel)]="Description" placeholder="Entrez la description"></textarea>
+
+  <button type="submit">Ajouter la tache</button>
+</form>
