@@ -1,5 +1,5 @@
 /* Conteneur principal */
-div {
+.tasks-container {
   max-width: 60%;
   margin: 40px auto;
   padding: 20px;
@@ -8,12 +8,39 @@ div {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre */
-h1 {
-  text-align: center;
-  color: #ffffff;
-  font-size: 1.8rem;
+/* Header avec titre centré et bouton à droite */
+.header {
+  display: flex;
+  align-items: center;        /* centre verticalement */
+  justify-content: center;    /* centre le titre horizontalement */
+  position: relative;         /* pour positionner le bouton indépendamment */
   margin-bottom: 20px;
-  font-weight: 600;
+  color: #ffffff;
 }
 
+/* Titre centré */
+.header h1 {
+  margin: 0;
+  text-align: center;
+  flex: 1;                    /* prend toute la largeur disponible */
+}
+
+/* Bouton positionné à droite */
+.add-btn {
+  position: absolute;          /* sort du flux flex */
+  right: 0;                    /* aligné à droite du header */
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #2f93bb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-btn:hover {
+  background-color: #e6f2fa;
+}

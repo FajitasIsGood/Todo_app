@@ -1,8 +1,12 @@
 <!-- Le composant tasks, parent de task, va utiliser l'app add-todo, et utiliser l'event (add) pour call la methode onAddTask, $event prendra l output de add-->
 <app-add-todo (add)="onAddTask($event)"/>
 
-<div>
-    <h1>Liste des taches du jour</h1>
+<div class="tasks-container">
+  <div class="header">
+    <h1>Liste des tâches du jour</h1>
+    <button class="add-btn" (click)="onDeleteTask()">🗂️ Ajouter à l'historique</button>
+  </div>
+
 
     @for(task of tasks; track task.title) {
         <app-task [task]="task"></app-task>

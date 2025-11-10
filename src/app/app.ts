@@ -9,7 +9,7 @@ import { Tasks } from "./tasks/tasks";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, AddTodo, CommonModule, Tasks],
+  imports: [Header, CommonModule, Tasks],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

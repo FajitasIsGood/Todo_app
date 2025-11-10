@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NewTask } from '../task/task.model';
 import { Task } from "../task/task";
 import { AddTodo } from "../add-todo/add-todo";
+import { TasksServices } from './tasks.services';
 
 @Component({
   selector: 'app-tasks',
@@ -9,27 +10,31 @@ import { AddTodo } from "../add-todo/add-todo";
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
 })
-export class Tasks implements OnInit {
-
+export class Tasks  {
+  // private tasksServices = new TasksServices();
   //Initialisation de la liste des tâches sans tâche au départ
-  tasks : NewTask[]=[] ;
   
-  ngOnInit() {
-    const tasksFromStorage = localStorage.getItem('tasks');
+  constructor(private tasksServices: TasksServices) {}
+  
+  
 
-    if (tasksFromStorage) {
-      this.tasks = JSON.parse(tasksFromStorage);
-    }
+  get tasks() {
+    return this.tasksServices.getTasks();
   }
+
   //Méthode pour ajouter une nouvelle tâche à la liste
   onAddTask(taskData: NewTask) {
     console.log('Nouvelle tâche ajoutée :', taskData);
     // unshift pour ajouter au début du tableau
-    this.tasks.unshift({title : taskData.title, description : taskData.description});
-    this.saveTasksToStorage();
+    this.tasksServices.addTask(taskData)
+
+
   }
 
-  private saveTasksToStorage() {
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+  onDeleteTask() {
+    this.tasksServices.deleteTask();
+
   }
+
+
 }
