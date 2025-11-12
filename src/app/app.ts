@@ -6,10 +6,11 @@ import { Task } from "./task/task";
 import { CommonModule } from '@angular/common';
 import { NewTask } from './task/task.model';
 import { Tasks } from "./tasks/tasks";
+import { Menu } from "./menu/menu";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, CommonModule, Tasks],
+  imports: [Header, CommonModule, Tasks, Menu, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

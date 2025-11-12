@@ -6,6 +6,8 @@ import { NewTask } from "../task/task.model";
 @Injectable({providedIn: 'root'})
 export class TasksServices {
   private tasks : NewTask[]=[] ;
+
+  
     
   constructor() {
     // Verifier que le localStorage est present pour executer le code, il y avait un probleme lors du server side rendering 

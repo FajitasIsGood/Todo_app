@@ -23,6 +23,7 @@
   margin: 0;
   text-align: center;
   flex: 1;                    /* prend toute la largeur disponible */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Bouton positionné à droite */

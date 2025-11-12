@@ -1,0 +1,14 @@
+<mat-sidenav-container style="height: 100vh;">
+  <mat-sidenav mode="side" [opened]="opened" style="width: 130px; padding: 16px;">
+    <h3>Menu</h3>
+    <button mat-button [routerLink]="['/']">Todo List</button>
+    <button mat-button [routerLink]="['/history']">Historique</button>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+      <app-header [title]="headerTitle"/> 
+        <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
